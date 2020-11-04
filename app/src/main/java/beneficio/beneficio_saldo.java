@@ -4,7 +4,10 @@ public class beneficio_saldo {
 
     // Declaración de datos.
 
+
     private int axel;
+    private int betzabe;
+    private int matias;
     private int roxana;
     private int credito_hp;
     private int credito_au;
@@ -17,6 +20,8 @@ public class beneficio_saldo {
         roxana = 900000;
         credito_hp = 1000000;
         credito_au = 500000;
+        betzabe = 650000;
+        matias = 860000;
 
     }
 
@@ -25,6 +30,16 @@ public class beneficio_saldo {
     public int getAxel()
     {
         return axel;
+    }
+
+    public int getBetzabe()
+    {
+        return betzabe;
+    }
+
+    public int getMatias()
+    {
+        return matias;
     }
 
     public int getRoxana()

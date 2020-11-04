@@ -54,6 +54,10 @@ public class prestamos_act extends AppCompatActivity {
         int resultAxel1 = cli.getAxel() + bene.getCredito_hp();
         int resultRoxana = cli.getRoxana() + bene.getCredito_au();
         int resultRoxana1 = cli.getRoxana() + bene.getCredito_hp();
+        int resultBetzabe = cli.getBetzabe() + bene.getCredito_au();
+        int resultBerzabe1 = cli.getBetzabe() + bene.getCredito_hp();
+        int resultMatias = cli.getMatias() + bene.getCredito_au();
+        int resultMatias1 = cli.getMatias() + bene.getCredito_hp();
 
 
         //inteligencia para Axel
@@ -80,6 +84,30 @@ public class prestamos_act extends AppCompatActivity {
         if(clientes.equals("roxana") && beneficio.equals("credito_hp"))
         {
             text.setText("su saldo que da en: " + resultRoxana1);
+
+        }
+        //inteligencia para Betzabe
+
+        if(clientes.equals("betzabe") && beneficio.equals("credito_au"))
+        {
+            text.setText("su saldo que da en: " + resultBetzabe);
+
+        }
+        if(clientes.equals("betzabe") && beneficio.equals("credito_hp"))
+        {
+            text.setText("su saldo que da en: " + resultBerzabe1);
+
+        }
+        //inteligencia para Matias
+
+        if(clientes.equals("matias") && beneficio.equals("credito_au"))
+        {
+            text.setText("su saldo que da en: " + resultMatias);
+
+        }
+        if(clientes.equals("matias") && beneficio.equals("credito_hp"))
+        {
+            text.setText("su saldo que da en: " + resultMatias1);
 
         }
 
