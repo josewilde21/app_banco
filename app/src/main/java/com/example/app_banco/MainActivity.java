@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 String contra = edit2.getText().toString();
 
 
-                if (usuario.equals("Android") && contra.equals("123")) {
+                if (usuario.equalsIgnoreCase("android") && contra.equalsIgnoreCase("123")) {
                     Toast.makeText(getBaseContext(), "Sesión Iniciada Espere Porfavor", Toast.LENGTH_SHORT).show();
                     new Task().execute();
 

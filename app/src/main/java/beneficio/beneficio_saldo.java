@@ -20,8 +20,7 @@ public class beneficio_saldo {
         roxana = 900000;
         credito_hp = 1000000;
         credito_au = 500000;
-        betzabe = 650000;
-        matias = 860000;
+
 
     }
 
@@ -32,15 +31,6 @@ public class beneficio_saldo {
         return axel;
     }
 
-    public int getBetzabe()
-    {
-        return betzabe;
-    }
-
-    public int getMatias()
-    {
-        return matias;
-    }
 
     public int getRoxana()
     {

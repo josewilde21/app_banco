@@ -54,10 +54,7 @@ public class prestamos_act extends AppCompatActivity {
         int resultAxel1 = cli.getAxel() + bene.getCredito_hp();
         int resultRoxana = cli.getRoxana() + bene.getCredito_au();
         int resultRoxana1 = cli.getRoxana() + bene.getCredito_hp();
-        int resultBetzabe = cli.getBetzabe() + bene.getCredito_au();
-        int resultBerzabe1 = cli.getBetzabe() + bene.getCredito_hp();
-        int resultMatias = cli.getMatias() + bene.getCredito_au();
-        int resultMatias1 = cli.getMatias() + bene.getCredito_hp();
+
 
 
         //inteligencia para Axel
@@ -86,30 +83,7 @@ public class prestamos_act extends AppCompatActivity {
             text.setText("su saldo que da en: " + resultRoxana1);
 
         }
-        //inteligencia para Betzabe
 
-        if(clientes.equals("betzabe") && beneficio.equals("credito_au"))
-        {
-            text.setText("su saldo que da en: " + resultBetzabe);
-
-        }
-        if(clientes.equals("betzabe") && beneficio.equals("credito_hp"))
-        {
-            text.setText("su saldo que da en: " + resultBerzabe1);
-
-        }
-        //inteligencia para Matias
-
-        if(clientes.equals("matias") && beneficio.equals("credito_au"))
-        {
-            text.setText("su saldo que da en: " + resultMatias);
-
-        }
-        if(clientes.equals("matias") && beneficio.equals("credito_hp"))
-        {
-            text.setText("su saldo que da en: " + resultMatias1);
-
-        }
 
 
 
@@ -120,42 +94,51 @@ public class prestamos_act extends AppCompatActivity {
         String beneficio = spin2.getSelectedItem().toString();
 
         beneficio_saldo bene = new beneficio_saldo();
+        beneficio_saldo cli = new beneficio_saldo();
 
 
 
-        int resultdeudaA = 8 / bene.getCredito_au();
-        int resultdeudaA1 = 12 / bene.getCredito_hp();
+        int resultAxel = cli.getAxel() +  bene.getCredito_hp();
+        int resultAxel1 = cli.getAxel() +  bene.getCredito_au();
+        int resultRoxana = cli.getRoxana() +  bene.getCredito_hp();
+        int resultRoxana1 = cli.getRoxana() +  bene.getCredito_au();
 
 
-        int resultdeudaR = 8 / bene.getCredito_au();
-        int resultdeudaR1 = 12 / bene.getCredito_hp();
 
 
-        //inteligencia para Axel
+        int resultdeudaA = resultAxel / 12;
 
-        if(bene.equals("credito_au") && clientes.equals("axel"))
+        int resultdeudaA1 = resultAxel1/ 8;
+
+        int resultdeudaR = resultRoxana/ 12;
+
+        int resultdeudaR1 = resultRoxana1/ 8;
+
+
+
+        if(clientes.equals("axel") && beneficio.equals("credito_au"))
         {
-            text.setText("señor axel su saldo final dividas en 8 queda en: " + resultdeudaA);
+            text.setText("su saldo que da en: " + resultdeudaA1);
 
         }
-        if(bene.equals("credito_hp") && clientes.equals("axel"))
+        if(clientes.equals("axel") && beneficio.equals("credito_hp"))
         {
-            text.setText("señor axel su saldo final dividas en 12 queda en: " + resultdeudaA1);
+            text.setText("su saldo que da en: " + resultdeudaA);
 
         }
 
-        //inteligencia para Roxana
 
-        if(bene.equals("credito_au") && clientes.equals("roxana"))
+        if(clientes.equals("roxana") && beneficio.equals("credito_hp"))
         {
-            text.setText("señorita roxana su saldo final dividas en 8 queda en: " + resultdeudaR);
+            text.setText("su saldo que da en: " + resultdeudaR);
 
         }
-        if(bene.equals("credito_hp") && clientes.equals("roxana"))
+        if(clientes.equals("roxana") && beneficio.equals("credito_au"))
         {
-            text.setText("señorita roxana su saldo final dividas en 12 queda en: " + resultdeudaR1);
+            text.setText("su saldo que da en: " + resultdeudaR1);
 
         }
+
 
 
 
